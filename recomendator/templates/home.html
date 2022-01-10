@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+<div class="container">
+    <h1 class="logo cursive">
+        Recomendacion inteligente de Itinerarios
+    </h1>
+<!--  H1 can have 2 designs: "logo" and "logo cursive"           -->
+    
+    <div class="content">
+        <h4 class="motto">Para operar, seleccione la cantidad de dias que posee y la cantidad de lugares turisticos que desea visitar en promedio.</h4>
+        <div class="subscribe">
+            <div class="row">
+                <div class="col-md-4 col-md-offset-4 col-sm6-6 col-sm-offset-3 ">
+                    <form class="form-inline" role="form" action="{% url 'recomendacion' %}">
+                      <div class="form-group">
+                        <input type="number" name="dias" id="" class="form-control transparent" placeholder="Dias estimados...">
+                        <input type="number" name="lugares" id="" class="form-control transparent" placeholder="Lugares estimados...">
+                      </div>
+                      <button type="submit" class="btn btn-danger btn-fill">Realizar Itinerarios</button>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}
